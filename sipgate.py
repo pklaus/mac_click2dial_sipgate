@@ -45,3 +45,21 @@ class SimpleSipgateApi:
                                                     'LocalUri': local_uri,
                                                     'TOS': 'voice'})
         return result['StatusCode'] == 200
+
+
+def makeSipUri(caller_id):
+    sip_uri = ""
+
+    if re.compile("^49[1-9][0-9]*$").match(caller_id):
+        # print "match ^49[1-9][0-9]*$ "
+        sip_uri = "sip:%s@sipgate.net" % (caller_id)
+
+    elif re.compile("^0[1-9]*$").match(caller_id):
+        # print "match ^0[1-9]*$"
+        sip_uri = "sip:49%s@sipgate.net" % (caller_id[1:])
+
+    elif re.compile("^\+49[1-9][0-9]*$").match(caller_id):
+        # print "match ^+49[1-9][0-9]*$"
+        sip_uri = "sip:%s@sipgate.net" % (caller_id[1:])
+
+    return sip_uri
