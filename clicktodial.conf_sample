@@ -1,0 +1,6 @@
+# sipgate clicktodial plugin for Apple Addressbook config file
+
+[account]
+user:		foo
+password:	secret
+phone:		sip:555123@sipgate.de
