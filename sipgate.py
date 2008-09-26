@@ -46,6 +46,8 @@ class SimpleSipgateApi:
 
 def makeSipUri(caller_id):
     sip_uri = ""
+    
+    caller_id = caller_id.replace(' ','').replace
 
     if re.compile("^49[1-9][0-9]*$").match(caller_id):
         # print "match ^49[1-9][0-9]*$ "
