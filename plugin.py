@@ -11,6 +11,9 @@ author: Marcel Lauhoff <ml@irq0.org>
 from AddressBook import *
 from AppKit import *
 
+from ConfigParser import ConfigParser
+import os.path
+
 from sipgate import *
 
 class SipgateClickToDial(NSObject):
@@ -27,11 +30,9 @@ class SipgateClickToDial(NSObject):
         phones = person.valueForProperty_(kABPhoneProperty)
         use_phone = phones.valueForIdentifier_(identifier)
 
-        s = SimpleSipgateApi("serious","callthepower")
-        s.call("sip:8725569@sipgate.de", makeSipUri(use_phone)) 
-        
-#         # testing ... 
-#         pboard = NSPasteboard.generalPasteboard()
-#         pboard.declareTypes_owner_([NSStringPboardType], None)
-#         pboard.setString_forType_(use_phone , NSStringPboardType)
+        conf = ConfigParser()
+        conf.read(os.path.expanduser('~/.clicktodial.conf'))
 
+        s = SimpleSipgateApi(conf.get('account','user'),
+                             conf.get('account','password'))
+        s.call(conf.get('account','phone'), makeSipUri(use_phone)) 

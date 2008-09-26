@@ -22,7 +22,7 @@ infoPlist = dict(
 setup(
     name='ClickToDial',
     plugin=['plugin.py'],
-    data_files=[],
+    data_files=['sipgate.py'],
     options=dict(py2app=dict(
         extension=".bundle",
         plist=infoPlist,

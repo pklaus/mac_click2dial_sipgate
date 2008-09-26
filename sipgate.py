@@ -4,9 +4,8 @@
 """
 Simple and uncomplete sipgate python api
 
-autho: Marcel Lauhoff <ml@irq0.org>
+author: Marcel Lauhoff <ml@irq0.org>
 """
-
 
 import sys,os
 import getopt
@@ -19,8 +18,6 @@ IDENT={'ClientName': 'irq0.org sipgate api',
        'ClientVersion': '0.1'}
 
 PATH=sys.path[0]
-
-
 
 class SimpleSipgateApi:
     """ simple and uncomplete si pgate api :) """
