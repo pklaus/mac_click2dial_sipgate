@@ -57,7 +57,7 @@ which is basically
 * Marcel Lauhoff (ml →AT→ serious-net.org)  
   The original author.
 * Philipp Klaus (philipp.klaus →AT→ gmail.com)  
-  I copied file by file from <https://git.irq0.org/mac_click2dial.git>
+  I copied file by file from <https://gitweb.irq0.org/?p=mac_click2dial.git;a=summary>
   (The git repo https://git.irq0.org/mac_click2dial.git was unreachable).  
   Then I put it to GitHub and made it compatible with OS X Snow Leopard.
 
