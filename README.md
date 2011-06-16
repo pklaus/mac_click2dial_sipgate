@@ -28,10 +28,12 @@ by clicking on the phone number and selecting **Call via Sipgate**.
 Get the source, then you may first test if the call to the Sipgate XML-RPC API
 works works by entering the following in a python2.6 command prompt:
 
-    from sipgate import *
-    
-    s = SimpleSipgateApi('YOUR_SIPGATE_USERNAME','YOUR_SIPGATE_PASSWORD')
-    s.call('sip:YOUR_SIP_ID@sipgate.de', makeSipUri('+49-phone-you-wanna-call'))
+```python
+from sipgate import *
+
+s = SimpleSipgateApi('YOUR_SIPGATE_USERNAME','YOUR_SIPGATE_PASSWORD')
+s.call('sip:YOUR_SIP_ID@sipgate.de', makeSipUri('+49-phone-you-wanna-call'))
+```
 
 #### Build Requirements
 
@@ -66,4 +68,4 @@ on [the bug tracker][] and provide details from the log file `~/.clicktodial.log
 
 
 [sample configuration file]: https://github.com/pklaus/mac_click2dial_sipgate/blob/master/clicktodial.conf
-[the bug tracker][]: https://github.com/pklaus/mac_click2dial_sipgate/issues
+[the bug tracker]: https://github.com/pklaus/mac_click2dial_sipgate/issues
