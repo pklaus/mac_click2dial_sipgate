@@ -9,7 +9,8 @@ to find further information.
 * **plugin.py**
   The Address Book plugin.
 * **sipgate.py**
-  The file to communicate with the Sipgate API.
+  The api helper to communicate with the Sipgate API. From the project
+  <https://github.com/pklaus/python-sipgate-xmlrpc>.
 * Less important files:
   * **clicktodial.conf**  
     Example configuration file
@@ -20,9 +21,10 @@ to find further information.
 
 ### Debugging
 
-If you want to debug the application, you may write to the log
-file `~/.clicktodial.log` and have a look at the messages of the
-OS X application Console. It holds tracebacks of exceptions.
+If you want to debug the application, you should enable loggin in
+the configuration file and use the log function in plugin.py.
+Also have a look at the messages of the OS X application Console.
+It holds tracebacks of exceptions.
 
 ### Inspiration
 

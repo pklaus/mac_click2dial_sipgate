@@ -25,16 +25,6 @@ by clicking on the phone number and selecting **Call via Sipgate**.
 
 ## Custom Build
 
-Get the source, then you may first test if the call to the Sipgate XML-RPC API
-works works by entering the following in a python2.6 command prompt:
-
-```python
-from sipgate import *
-
-s = SimpleSipgateApi('YOUR_SIPGATE_USERNAME','YOUR_SIPGATE_PASSWORD')
-s.call('sip:YOUR_SIP_ID@sipgate.de', makeSipUri('+49-phone-you-wanna-call'))
-```
-
 #### Build Requirements
 
 * You need py2app:  
@@ -49,13 +39,15 @@ Run
 
 which is basically
 
+    wget https://raw.github.com/pklaus/python-sipgate-xmlrpc/v0.9.2/sipgate.py
     python2.6 setup.py py2app
     mv "dist/SipgateClickTodial.bundle" "~/Library/Address Book Plug-Ins/"
 
 ## Authors
 
 * Marcel Lauhoff (ml →AT→ serious-net.org)  
-  The original author.
+  He first published the project on <http://irq0.org/Code> and is the original
+  author. He allowed me to use the code and publish it under any license. Thx!
 * Philipp Klaus (philipp.klaus →AT→ gmail.com)  
   I copied file by file from <https://gitweb.irq0.org/?p=mac_click2dial.git;a=summary>
   (The git repo https://git.irq0.org/mac_click2dial.git was unreachable).  
