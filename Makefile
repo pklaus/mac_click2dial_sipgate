@@ -9,7 +9,7 @@ dist/SipgateClickTodial.bundle: sipgate.py
 
 sipgate.py:
 	@-rm sipgate.py
-	wget https://raw.github.com/pklaus/python-sipgate-xmlrpc/$(SIPGATE_LIB_VERSION_TAG)/sipgate.py
+	curl -O https://raw.github.com/pklaus/python-sipgate-xmlrpc/$(SIPGATE_LIB_VERSION_TAG)/sipgate.py
 
 install: dist/SipgateClickTodial.bundle
 	@-rm -rf ~/Library/Address\ Book\ Plug-Ins/SipgateClickTodial.bundle
