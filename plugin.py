@@ -138,3 +138,12 @@ class Caller(object):
             return self.conf.get('account',name)
         except:
             return None
+
+if __name__ == "__main__":
+    c = Caller()
+    import sys
+    if len(sys.argv) == 1:
+        print('To test this module, run it with a phone number as first parameter.')
+        sys.exit(2)
+    c.call(sys.argv[1])
+
