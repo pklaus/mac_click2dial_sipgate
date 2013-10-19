@@ -49,9 +49,8 @@ which is basically
   He first published the project on <http://irq0.org/Code> and is the original
   author. He allowed me to use the code and publish it under any license. Thx!
 * Philipp Klaus (philipp.klaus →AT→ gmail.com)  
-  I copied file by file from <https://gitweb.irq0.org/?p=mac_click2dial.git;a=summary>
-  (The git repo https://git.irq0.org/mac_click2dial.git was unreachable).  
-  Then I put it to GitHub and made it compatible with OS X Snow Leopard.
+  I forked [Marcel's git repo](https://git.irq0.org/mac_click2dial.git)
+  and put it to GitHub. Then I made it compatible with OS X Snow Leopard.
 
 #### Bug Reports
 
