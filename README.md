@@ -14,6 +14,7 @@ via Sipgate VoIP calls directly from the Address Book application.
 
 Get **SipgateClickToDial.bundle.zip** from the [downloads section](https://github.com/pklaus/mac_click2dial_sipgate/downloads),
 unpack it and move the bundle to the folder `~/Library/Address Book Plug-Ins/`.
+You can open this folder in Finder by entering `open ~/Library/"Address Book Plug-Ins"` on the command line.
 
 Then create a configuration file `~/.clicktodial.conf` from the
 [sample configuration file][].
