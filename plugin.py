@@ -104,15 +104,21 @@ class Caller(object):
         raise NameError('Your configuration file must contain the value for `user`.')
 
     def get_local_uri(self):
+        # use the phone config value if it is set:
         if self.get_conf('phone'):
             return self.get_conf('phone')
-
+        # otherwise get the default SIP URI and cache it:
+        try:
+            return self.local_uri
+        except:
+            pass
         try:
             s = self.get_api()
             for own_uri in s.OwnUriListGet()['OwnUriList']:
-                if own_uri['DefaultUri']: return own_uri['SipUri']
+                if own_uri['DefaultUri']: self.local_uri = own_uri['SipUri']
         except:
             raise NameError('Problem while looking for the default SIP URI.')
+        return self.local_uri
 
     def get_api(self):
         try:
